@@ -46,10 +46,15 @@
             allowfullscreen
           ></iframe>
           </section>
-
-          <p>
+          <p class="update-me">
             Here's a table of other places you can find me.
           </p>
+          <!-- example of simple dom manipulation -->
+          <script>
+            const myp = document.querySelector('.update-me');
+            myp.innerHTML = `Here's a table of <i>some</i> other places you can find me.`
+          </script>
+          
           <table style="background-color: white; border-radius: 4px; padding: 4px; margin: auto">
             <thead>
               <tr>
