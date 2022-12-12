@@ -1,0 +1,374 @@
+/* 
+  This is a heavily modified css file bootstrapped from glitch hello-world 
+  which provides some sensible defaults and resets and opentype fonts from CDN
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #0099ff;
+  --color-red: #f76969ba;
+  --color-blue: #69b2f7ba;
+  --color-text-main: #000000;
+  --color-primary: #ffff00;
+  --wrapper-height: 60vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+html { 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* begin body sections */  
+
+body {
+  font-family: HK Grotesk;
+  background-color: var(--color-bg);
+}
+
+body.bio {
+  background: url("../images/IMG_3500.jpg");
+  height: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* education */
+body.mscis {
+  background: url("../images/series-bg-01.jpg");
+  height: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* photos */
+body.photos {
+  background: url("../images/IMG_5791.jpg");
+  height: 100%; 
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* hobbies */
+body.hobbies {
+  background: url("../images/IMG_9469.JPG");
+  height: 80%; 
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* contact */
+body.contact {
+  background: url("../images/photo-1595087012935-124877078142.jpeg");
+  height: 100%; 
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.contact main form {
+  background-color: rgba(173,216,230,0.8);
+  border-radius: 4px;
+  padding: 10px;
+}
+
+body.next {
+  background: url("../images/next.jpg");
+  height: 100%; 
+  background-position: 0px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p { 
+  background-color: rgba(173,216,230,0.9);
+  border-radius: 4px;
+  padding: 10px;
+  -webkit-box-shadow: 5px 5px 0px 0px #289FED; 
+  box-shadow: 5px 5px 0px 0px #289FED;   
+}
+
+h1 {
+  color: var(--color-primary);
+}
+
+h2 {
+  background-color: white;
+  padding: 10px;
+  -webkit-box-shadow: 5px 5px 0px 0px #289FED; 
+  box-shadow: 5px 5px 0px 0px #289FED;
+  border-radius: 4px;     
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.5s ease 0.5s;
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+header li a {
+  text-decoration: none;
+  color: var(--color-text-main);
+  transition: all 0.2s ease 0s;
+}
+
+header li a:hover {
+  color: var(--color-primary);
+}
+
+nav ul {
+  padding-left: 0px;
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* form grid system-ish */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  margin: 5px; 
+}
+
+.left,
+.right {
+  flex: 0 0 33%;
+  text-align: left;
+  padding: 10px 0 10px 0;
+  box-sizing: border-box;
+}
+
+/* form validation */
+input:invalid {
+  border: 2px dashed red;
+  background: white;
+}
+
+input:valid {
+  border: 2px solid black;
+  background: limegreen;
+}
+
+input[type="submit"] {
+  background: white;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color: #FFA500;
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 0;
+}
+
+.mscis .title {
+    color: red;
+}
+
+.photos .title {
+  color: limegreen;
+}
+
+.next .title {
+  color: var(--color-primary);
+}
+
+/* Very light scaling for our illustration */
+.illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+}
+
+/* Subheading */
+h2 {
+  color: #2800ff;
+}
+
+/* Interactive image and buttons */
+.illustration:active {
+  transform: translateY(5px);
+}
+
+.dipped {
+  transform: translateY(5px);
+}
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.btn--remix {
+  font-family: HK Grotesk;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2.75rem;
+  align-items: center;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.btn--remix img {
+  margin-right: 0.5rem;
+}
+.btn--remix:hover {
+  background-color: #d0fff1;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+
+/* Responsive */
+/* ----------- iPhone XR ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: portrait) {
+  body {
+    background-color: var(--color-red);
+  }
+  header ul {
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  header li {
+    display: block;
+    padding: 0;
+  }
+  .title {
+    text-align: center;
+  }
+  .youtube {
+    width: 360px;
+  }
+}
+
+/* ----------- iPad Air ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-color: var(--color-blue);
+  }
+  .title {
+    color: var(--color-red);
+  }
+}
+
+
+/**/
+
+.dragme {
+  position: relative;
+  
+  cursor: move;
+}
+
+#draggable {
+  background-color: #ccc;
+  border: 1px solid #000;
+}
