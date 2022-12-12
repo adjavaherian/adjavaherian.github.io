@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Contact Me</title>
+
+    <meta name="robots" content="index,follow" />
+    <meta property="og:type" content="article" />
+    
+    <link rel="stylesheet" href="./style.css" />
+
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="contact">
+    <div class="wrapper">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./why-cs601.html">CS 601</a></li>
+            <li><a href="./whats-next.html">What's Next?</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="content full-background">
+        
+        <h1 class="title">Contact me.</h1>
+        
+        <section class="main">
+          <h2 class="row">
+            Let's use this form to send me an email (via 3rd party)
+          </h2> 
+          <div class="row form"> 
+            <form id="week4-form" action="https://mailthis.to/a_mir@me.com" method="POST">
+              <div class="row">
+                <!-- regexr.com/73al1 I created for the regex validation -->
+                <input type="text" class="column" placeholder="First Name" name="firstName" id="firstName" required pattern="^[a-zA-Z]{2,}$" />
+                <div class="column">hint: min 2 chars A-Z, a-z only</div>
+              </div>
+              <div class="row">
+                <input type="text" class="column" placeholder="Last Name" name="lastName" id="lastName" required pattern="^[a-zA-Z]{2,}$" />
+                <div class="column">hint: min 2 chars A-Z, a-z only</div>
+              </div>
+              <div class="row">
+                <input type="email" class="column" placeholder="Email" name="_replyto" id="email" required />
+                <div class="column">hint: foo@bar.com</div>
+              </div>
+              <div class="row" style="padding: 10px">
+                <div class="row">Your fave green?</div>
+                <div class="row">
+                  <input type="radio" id="broccoli" name="fave_green" value="broccoli">
+                  <label for="broccoli">broccoli</label>
+                </div>
+                <div class="row">
+                  <input type="radio" id="bokchoi" name="fave_green" value="bokchoi">
+                  <label for="bokchoi">bok choi</label>                    
+                </div>
+                <div class="row">
+                  <input type="radio" id="asparagus" name="fave_green" value="asparagus">
+                  <label for="asparagus">asparagus</label>  
+                </div>                                
+              </div>
+              <div class="row" style="padding: 10px">
+                <div class="row">You like any of these bands?</div>
+                <div class="row">
+                  <input type="checkbox" id="pfunk" name="pfunk" value="pfunk">
+                  <label for="pfunk">P-Funk</label>
+                </div>
+                <div class="row">
+                  <input type="checkbox" id="dmb" name="dmb" value="dmb">
+                  <label for="dmb">Dave Matthews Band</label>                    
+                </div>
+                <div class="row">
+                  <input type="checkbox" id="taylor" name="taylor" value="taylor">
+                  <label for="taylor">Taylor Swift</label>  
+                </div>                                
+              </div>                           
+              <div class="row">
+                <input class="column" type="submit" value="Submit">
+                <input class="column" type="reset" value="Reset">
+              </div>  
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
